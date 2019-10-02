@@ -1,8 +1,8 @@
 # Crc8_J1850
 CRC8 algorithm according to J1850
-For more explanations please refer to:
-	https://www.autosar.org/fileadmin/user_upload/standards/classic/4-3/AUTOSAR_SWS_CRCLibrary.pdf
-	http://www.sunshine2k.de/coding/javascript/crc/crc_js.html 
+For more explanations please refer to: <br>
+	https://www.autosar.org/fileadmin/user_upload/standards/classic/4-3/AUTOSAR_SWS_CRCLibrary.pdf <br>
+	http://www.sunshine2k.de/coding/javascript/crc/crc_js.html <br>
 
 To run the unit testing test harness:
 1. Go to "unit_testing" folder
