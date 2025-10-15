@@ -8,10 +8,11 @@ For more explanations please refer to: <br>
 This is generated using [SWIG](https://www.swig.org)  development tool.
 
 To generate and test the Python wrapper:
-1. Go to swig_wrapper sub-folder
-2. Run: make all
-3. Test the wrapper: python3 th_Crc8_J1850.py<br>
-   This is also nice example how to use the wrapper.
+1. Install SWIG development tool
+2. Go to swig_wrapper sub-folder
+3. Run: make all
+4. Test the wrapper: python3 th_Crc8_J1850.py<br>
+   This is also nice example how to use the wrapper in Python.
 
 ## Unit testing
 To run the unit testing test harness:

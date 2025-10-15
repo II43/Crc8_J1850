@@ -32,10 +32,28 @@ $(TARGET)_wrap.c: $(TARGET).i
 	swig -python $(TARGET).i
 
 # Rule to generate the Python test script
-# Rule to generate the Python test script from the template
+
+# --- Test Data Block ---
+define TEST_CASES_BLOCK
+test_cases = {
+    0x59 : [0x00,0x00,0x00,0x00],
+    0x37 : [0xF2,0x01,0x83],
+    0x79 : [0x0F,0xAA,0x00,0x55],
+    0xB8 : [0x00,0xFF,0x55,0x11],
+    0xCB : [0x33,0x22,0x55,0xAA,0xBB,0xCC,0xDD,0xEE,0xFF],
+    0x8C : [0x92,0x6B,0x55],
+    0x74 : [0xFF,0xFF,0xFF,0xFF]
+}
+endef
+
 th_$(TARGET).py: th_template.py
 	@echo "Generating test script $@ from template..."
-	@sed 's/%%MODULE_NAME%%/$(TARGET)/g' $< > $@
+	$(file > test_cases.tmp,$(TEST_CASES_BLOCK))
+	@sed -e 's/%%MODULE_NAME%%/$(TARGET)/g' \
+	    -e '/%%TEST_CASES_DEFINITION%%/r test_cases.tmp' \
+	    -e '/%%TEST_CASES_DEFINITION%%/d' \
+	    $< > $@
+
 
 # Clean up generated files
 clean:
@@ -43,3 +61,4 @@ clean:
 	rm -f $(TARGET).py 
 	rm -f th_$(TARGET).py 
 	rm -rf __pycache__
+	rm -f test_cases.tmp
