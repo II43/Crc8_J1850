@@ -26,4 +26,5 @@ To re-build test harness in Windows:
 1. Install MinGW compiler
 2. Add it to the Windows "PATH" environement variable
 3. Restart computer
-4. Run: mingw32-make th_Crc8_J1850 
+4. Run: mingw32-make all<br>
+   Just to be clear: This shall be run instead of simple 'make all' from above instructions. 
