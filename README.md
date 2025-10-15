@@ -1,7 +1,7 @@
 # Crc8_J1850
 CRC8 algorithm according to J1850
 For more explanations please refer to: <br>
-	https://www.autosar.org/fileadmin/user_upload/standards/classic/4-3/AUTOSAR_SWS_CRCLibrary.pdf <br>
+	[AUTOSAR Specification of CRC Routines](https://www.autosar.org/fileadmin/standards/R22-11/CP/AUTOSAR_SWS_CRCLibrary.pdf) <br>
 	http://www.sunshine2k.de/coding/javascript/crc/crc_js.html <br>
 
 ## Python wrapper
