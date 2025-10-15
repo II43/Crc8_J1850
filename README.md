@@ -4,6 +4,16 @@ For more explanations please refer to: <br>
 	https://www.autosar.org/fileadmin/user_upload/standards/classic/4-3/AUTOSAR_SWS_CRCLibrary.pdf <br>
 	http://www.sunshine2k.de/coding/javascript/crc/crc_js.html <br>
 
+## Python wrapper
+This is generated using [SWIG](https://www.swig.org)  development tool.
+
+To generate and test the Python wrapper:
+1. Go to swig_wrapper sub-folder
+2. Run: make all
+3. Test the wrapper: python3 th_Crc8_J1850.py<br>
+   This is also nice example how to use the wrapper.
+
+## Unit testing
 To run the unit testing test harness:
 1. Go to "unit_testing" folder
 2. Run: th_Crc8_J1850 > results_th_Crc8_J1850.txt
